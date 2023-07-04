@@ -1,6 +1,3 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
-
 import { init as initApm } from '@elastic/apm-rum'
 var apm = initApm({
 
@@ -16,10 +13,4 @@ var apm = initApm({
   // Set the service environment
   environment: 'my-environment'
 })
-
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
-
+export default apm;
